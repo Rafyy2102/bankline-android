@@ -1,5 +1,7 @@
 package com.dio.bankline_android.domain
 
+import com.google.gson.annotations.SerializedName
+
 data class Movimentacao(
     val id: Int,
     val dataHora: String,
@@ -7,5 +9,6 @@ data class Movimentacao(
     val valor: Double,
     val tipo: TipoMovimentacao,
     //todo maper idConta com idCorrentista "idConta -> idCorrentista"
+    @SerializedName("idConta")
     val idCorrentista: Int
 )
